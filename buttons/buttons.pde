@@ -1,9 +1,38 @@
 //Global Variables
+//
+float buttonX, buttonY, buttonWidth, buttonHeight;
+color buttonColour, red=#DD1700, green=#048100, white=#FFFFFF, reset=white;
+//
+void setup() {
+  //Geometry
+  fullScreen(); //size(width, height);
+  //
+  //Population
+  buttonX = displayWidth*1/4;
+  buttonY = displayHeight*1/3;
+  buttonWidth = displayWidth*1/2;
+  buttonHeight = displayHeight*1/3;
+  //
+  } //End setup()
 
-void setup() //End setup()
+void draw() {
+  background(white);
+  if ( mouseX >= buttonX  && mouseY >= buttonY && mouseX <= buttonX+buttonWidth && mouseY <= buttonY+buttonHeight ) {
+      buttonColour = green;
+    } else {
+      buttonColour = red;
+      } //End IF Button Colour
+  fill(buttonColour);
+  rect(buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(reset);
+  //
+  } //End draw()
 
-void draw() //End draw()
+void mousePressed() {
+  if ( mouseX >= buttonX  && mouseY >= buttonY && mouseX <= buttonX+buttonWidth && mouseY <= buttonY+buttonHeight ) exit();
 
-void mousePressed() {} //End mousePressed
+  } //End mousePressed
 
-void keyPressed () {} //End keyPressed
+void keyPressed () {
+
+  } //End keyPressed
