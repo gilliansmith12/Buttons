@@ -1,7 +1,7 @@
 //Global Variables
 //
 float buttonX, buttonY, buttonWidth, buttonHeight;
-color buttonColour, red=#DD1700, green=#048100, white=#FFFFFF, reset=white;
+color buttonColour, textColour, red=#DD1700, green=#048100, white=#FFFFFF, reset=white, black=#000000;
 //
 void setup() {
   //Geometry
